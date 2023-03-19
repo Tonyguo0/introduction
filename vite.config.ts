@@ -6,10 +6,10 @@ export default defineConfig({
   plugins: [
     react(),
     
-  ],
-  server: {
-    watch: {
-      usePolling: true
-    }
-  }
+  ]
+  // ,server: {
+  //   watch: {
+  //     usePolling: true
+  //   }
+  // }
 })
