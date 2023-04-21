@@ -25,11 +25,12 @@ const Navbar = () => {
         </Link>
         {/* <p className='text-red-500'>Red</p> */}
 
+        {/* mapping each navLink there is e.g. [About, Work, Contact] to have an hover effect and clicked on effect  */}
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((navLink) => (
             <li
               key={navLink.id}
-              // making the navlink e.g. about work, contact have an active UI effect (turning white) when clicked and hovered over
+              // making the navlink e.g. about work, contact have an active UI effect (turning white) when clicked and hovered over. Also set the title e.g. [About, Work, Contact] as the "active" state hook 
               className={`${active === navLink.title
                   ? "text-white"
                   : "text-secondary"
