@@ -1,28 +1,30 @@
-import { useState } from 'react'
-import BasicNbar from './components/navbar'
-import './App.css'
-import Container from 'react-bootstrap/esm/Container'
+import { BrowserRouter } from 'react-router-dom'
 
-function App() {
-  const [count, setCount] = useState(0)
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components'
 
+const App = () => {
   return (
-    <div className='App'>
-      <BasicNbar />
-      <Container>
-        <div>
-          <h1>My Name is Tony Guo and this is my portfolio website</h1>
+    <BrowserRouter>
+
+      <div className='relative z-0 bg-primary'>
+        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+
+          <Navbar />
+          <Hero />
+          <About/>
+          <Experience/>
+          <Tech/>
+          <Works/>
+          <Feedbacks/>
+          <div className="relative z-0">
+            <Contact/>
+            <StarsCanvas/>
+          </div>
+
         </div>
 
-        <div className='card'>
-          <button
-            className='btn btn-primary'
-            onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-        </div>
-      </Container>
-    </div>
+      </div>
+    </BrowserRouter>
   )
 }
 

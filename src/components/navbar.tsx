@@ -1,58 +1,49 @@
-import Container from 'react-bootstrap/Container'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
-import NavDropdown from 'react-bootstrap/NavDropdown'
-import reactLogo from '../assets/react.svg'
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
-const BasicNbar = () => {
+import { styles } from '../styles'
+import { navLinks } from '../constants'
+import { logo, menu, close } from '../assets'
+import { link } from 'fs'
+
+const Navbar = () => {
+  const [active, setActive] = useState('')
+
   return (
-    <Navbar
-      bg='dark'
-      variant='dark'
-      expand='lg'>
-      <Container>
-        <Navbar.Toggle aria-controls='basic-navbar-nav' />
-        <Navbar.Collapse id='basic-navbar-nav'>
-          <Nav className='me-auto'>
-            <Nav.Link href='#home'>Home</Nav.Link>
-            <Nav.Link href='#exp'>EXP</Nav.Link>
-            <Nav.Link href='#blog'>Blog</Nav.Link>
-            <Nav.Link href='#projects'>Projects</Nav.Link>
-            <NavDropdown
-              title='Extra'
-              id='basic-nav-dropdown'>
-              <NavDropdown.Item href='#action/3.1'>Thoughts</NavDropdown.Item>
-              <NavDropdown.Item href='#action/3.2'>Games</NavDropdown.Item>
-              <NavDropdown.Item href='#action/3.3'>Randoms</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href='#action/3.4'>Sample</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Nav>
-           
-            <a
-              href='https://vitejs.dev'
-              target='_blank'>
-              <img
-                src='/vite.svg'
-                className='logo'
-                alt='Vite logo'
-              />
-            </a>
-            <a
-              href='https://reactjs.org'
-              target='_blank'>
-              <img
-                src={reactLogo}
-                className='logo react'
-                alt='React logo'
-              />
-            </a>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <nav
+      className={`
+        ${styles.paddingX}
+      w-full items-center py-f fixed top-0 z-20 bg-primary`}
+    >
+      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
+        <Link to='/' className='flex items-center gap-2' onClick={() => {
+          setActive("");
+          window.scrollTo(0, 0);
+        }}>
+          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+          <p className='text-white text-[18px] fond-bold cursor-pointer'> Tony <span className='sm:block hidden'> | Typescript Mastery</span></p>
+        </Link>
+        {/* <p className='text-red-500'>Red</p> */}
+
+        <ul className="list-none hidden sm:flex flex-row gap-10">
+          {navLinks.map((navLink) => (
+            <li
+              key={navLink.id}
+              // making the navlink e.g. about work, contact have an active UI effect (turning white) when clicked and hovered over
+              className={`${active === navLink.title
+                  ? "text-white"
+                  : "text-secondary"
+                } hover:text-white text-[18px]
+              font-mdeium cursor-pointer`}
+              onClick={()=> setActive(navLink.title)}
+            >
+              <a href={`#${navLink.id}`}>{navLink.title}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
   )
 }
 
-export default BasicNbar
+export default Navbar

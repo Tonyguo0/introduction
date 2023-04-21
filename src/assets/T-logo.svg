@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:svgjs="http://svgjs.dev/svgjs" width="2000" height="3315" viewBox="0 0 2000 3315">
+    <g transform="matrix(1,0,0,1,1.4563758389260784,1.3421052631579187)">
+        <svg viewBox="0 0 149 247" data-background-color="#ffffff"
+            preserveAspectRatio="xMidYMid meet" height="3315" width="2000"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="tight-bounds"
+                transform="matrix(1,0,0,1,-0.10849999999999227,-0.09999999999999432)">
+                <svg viewBox="0 0 149.21681860465117 247.2" height="247.2"
+                    width="149.21681860465117">
+                    <g>
+                        <svg></svg>
+                    </g>
+                    <g>
+                        <svg viewBox="0 0 149.21681860465117 247.2" height="247.2"
+                            width="149.21681860465117">
+                            <g transform="matrix(1,0,0,1,0,47.215199999999996)">
+                                <svg viewBox="0 0 149.21681860465117 152.7696" height="152.7696"
+                                    width="149.21681860465117">
+                                    <g>
+                                        <svg viewBox="0 0 149.2168186046512 152.76960000000003"
+                                            height="152.7696" width="149.21681860465117">
+                                            <g>
+                                                <svg
+                                                    viewBox="0 0 149.2168186046512 152.76960000000003"
+                                                    height="152.76960000000003"
+                                                    width="149.2168186046512">
+                                                    <g id="textblocktransform">
+                                                        <svg
+                                                            viewBox="0 0 149.2168186046512 152.76960000000003"
+                                                            height="152.76960000000003"
+                                                            width="149.2168186046512" id="textblock">
+                                                            <g>
+                                                                <svg
+                                                                    viewBox="0 0 149.2168186046512 152.76960000000003"
+                                                                    height="152.76960000000003"
+                                                                    width="149.2168186046512">
+                                                                    <g
+                                                                        transform="matrix(1,0,0,1,0,0)">
+                                                                        <svg
+                                                                            width="149.2168186046512"
+                                                                            viewBox="1.149999976158142 -34.400001525878906 33.599998474121094 34.400001525878906"
+                                                                            height="152.76960000000003"
+                                                                            data-palette-color="#4d7e3e">
+                                                                            <path
+                                                                                d="M34.75-25.6L23.5-25.6 23.5 0 12.45 0 12.45-25.6 1.15-25.6 1.15-34.4 34.75-34.4 34.75-25.6Z"
+                                                                                opacity="1"
+                                                                                transform="matrix(1,0,0,1,0,0)"
+                                                                                fill="#4d7e3e"
+                                                                                class="undefined-text-0"
+                                                                                data-fill-palette-color="primary"
+                                                                                id="text-0"></path>
+                                                                        </svg>
+                                                                    </g>
+                                                                </svg>
+                                                            </g>
+                                                        </svg>
+                                                    </g>
+                                                </svg>
+                                            </g>
+                                            <g></g>
+                                        </svg>
+                                    </g>
+                                </svg>
+                            </g>
+                            <path
+                                d="M0 41.215L0 1 149.217 1 149.217 41.215 135.44 41.215 135.44 14.777 13.777 14.777 13.777 41.215 0 41.215M0 205.985L0 246.2 149.217 246.2 149.217 205.985 135.44 205.985 135.44 232.423 13.777 232.423 13.777 205.985 0 205.985"
+                                fill="#4d7e3e" stroke="transparent"
+                                data-fill-palette-color="primary"></path>
+                        </svg>
+                    </g>
+                    <defs></defs>
+                </svg>
+                <rect width="149.21681860465117" height="247.2" fill="none" stroke="none"
+                    visibility="hidden"></rect>
+            </g>
+        </svg>
+    </g>
+</svg>

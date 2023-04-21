@@ -7,9 +7,9 @@ export default defineConfig({
     react(),
     
   ]
-  // ,server: {
-  //   watch: {
-  //     usePolling: true
-  //   }
-  // }
+  ,server: {
+    watch: {
+      usePolling: true
+    }
+  }
 })
