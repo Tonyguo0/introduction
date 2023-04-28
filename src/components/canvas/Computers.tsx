@@ -5,7 +5,15 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei"
 
 import CanvasLoader from '../Loader'
 
-const Computers = () => {
+interface Props {
+  isMobile?: boolean
+}
+
+interface MediaEvent {
+  matches: boolean | ((prevState: boolean) => boolean)
+}
+
+const Computers = ({ isMobile }: Props) => {
   const computer = useGLTF('./desktop_pc/scene.gltf')
 
   return (
@@ -19,8 +27,8 @@ const Computers = () => {
       {/* primitive object */}
       <primitive
         object={computer.scene}
-        scale={0.75}
-        position={[0, -3.25, -1.5]}
+        scale={isMobile ? 0.7 : 0.75}
+        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -31,17 +39,23 @@ const ComputerCanvas = () => {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('max-width: 500');
+    // basically use a listener to determine if the website size is mobile or not based on the windows event
 
+    // Add a Listener for changes to the screen size
+    const mediaQuery = window.matchMedia('(max-width: 500px)');
+
+    // Set the initial value of the 'isMobile' state variable
     setIsMobile(mediaQuery.matches)
 
-    const handleMediaQueryChange = (event: { matches: boolean | ((prevState: boolean) => boolean) }) => {
+    // Define a callback function to handle changes to the media query variable
+    const handleMediaQueryChange = (event: MediaEvent) => {
       setIsMobile(event.matches)
     }
 
+    // Add callback function as a listner for changes to the media query
     mediaQuery.addEventListener('change', handleMediaQueryChange)
 
-
+    // Remove the listener when the component is unmounted
     return () => {
       mediaQuery.removeEventListener('change', handleMediaQueryChange)
     }
@@ -62,7 +76,7 @@ const ComputerCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 4}
         />
-        <Computers />
+        <Computers isMobile={isMobile} />
 
       </Suspense>
 
