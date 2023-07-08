@@ -4,22 +4,12 @@ import { motion } from 'framer-motion'
 import 'react-vertical-timeline-component/style.min.css'
 
 import { styles } from '../styles'
-import { experiences } from '../constants'
+import { experiences, Iexperiences } from '../constants'
 import { SectionWrapper } from '../hoc'
 import { textVariant } from '../utils/motion'
 
-interface propsType {
-  experience: {
-    title: string;
-    company_name: string;
-    icon: any;
-    iconBg: string;
-    date: string;
-    points: string[];
-  }
-}
 
-const ExperienceCard = ({ experience }: propsType) => (
+const ExperienceCard = ({ experience }: Iexperiences) => (
   <VerticalTimelineElement
     contentStyle={{ background: '#1d1836', color: '#fff' }}
     contentArrowStyle={{ borderRight: '7px solid #232631' }}

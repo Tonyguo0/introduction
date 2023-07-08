@@ -3,12 +3,7 @@ import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { staggerContainer } from '../utils/motion'
 
-interface propsType {
-    Component: JSX.IntrinsicAttributes
-    idName: string
-}
-
-const SectionWrapper = (Component: () => JSX.Element, idName: string) => (function HOC() {
+const SectionWrapper = (Component: () => JSX.Element, idName: string) => (() => {
     return (
         <motion.section
             variants={staggerContainer()}
