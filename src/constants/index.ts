@@ -63,6 +63,11 @@ const services = [
   },
 ]
 
+export interface Itechnology {
+    name?: string
+    icon?: string
+}
+
 const technologies = [
   {
     name: 'HTML 5',
@@ -122,7 +127,7 @@ export interface Iexperiences {
   experience: {
     title: string
     company_name: string
-    icon: any
+    icon: string
     iconBg: string
     date: string
     points: string[]
