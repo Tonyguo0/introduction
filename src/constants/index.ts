@@ -134,6 +134,7 @@ export interface Iexperiences {
   }
 }
 
+
 const experiences = [
   {
     title: 'React.js Developer',
@@ -215,6 +216,10 @@ const testimonials = [
     image: 'https://randomuser.me/api/portraits/women/6.jpg',
   },
 ]
+
+export interface Iprojectcard {
+  index:number, name:string, description:string, tags:[], image:string, source_code_link:string
+}
 
 const projects = [
   {
