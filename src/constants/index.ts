@@ -64,8 +64,8 @@ const services = [
 ]
 
 export interface Itechnology {
-    name?: string
-    icon?: string
+  name?: string
+  icon?: string
 }
 
 const technologies = [
@@ -133,7 +133,6 @@ export interface Iexperiences {
     points: string[]
   }
 }
-
 
 const experiences = [
   {
@@ -218,7 +217,12 @@ const testimonials = [
 ]
 
 export interface Iprojectcard {
-  index:number, name:string, description:string, tags:[], image:string, source_code_link:string
+  index: number
+  name: string
+  description: string
+  tags: Array<{name:string, color: string}>
+  image: string
+  source_code_link: string
 }
 
 const projects = [
