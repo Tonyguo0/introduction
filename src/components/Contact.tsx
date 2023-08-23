@@ -90,6 +90,13 @@ const Contact = () => {
                     </button>
                 </form>
             </motion.div>
+            <motion.div
+                variants={slideIn("right", "tween", 0.2, 1)}
+                // both the model model and contact form will take one space in xl devices
+                className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+            >
+                <EarthCanvas />
+            </motion.div>
         </div>
     );
 };
