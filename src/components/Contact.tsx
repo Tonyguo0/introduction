@@ -7,6 +7,9 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+// emailJS template ID:
+// template_r6svbzs
+
 const Contact = () => {
     const formRef = useRef();
     const [form, setForm] = useState({ name: "", email: "", message: "" });

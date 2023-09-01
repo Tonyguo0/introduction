@@ -8,6 +8,7 @@ const Stars = (props) => {
     const ref = useRef();
     const sphere = random.inSphere(new Float32Array(5000), { radius: 1.2 });
 
+    // useFrame a react Hook from react Fiber
     // delta = change
     useFrame((state, delta) => {
         ref.current.rotation.x -= delta / 10;
