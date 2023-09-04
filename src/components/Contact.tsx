@@ -7,17 +7,56 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
-// emailJS template ID:
-// template_r6svbzs
-
 const Contact = () => {
     const formRef = useRef();
     const [form, setForm] = useState({ name: "", email: "", message: "" });
     const [loading, setLoading] = useState(false);
 
-    const handlChange = (e) => {};
+    const handleChange = (e) => {
+        const { name, value } = e.target;
 
-    const handlSubmit = (e) => {};
+        setForm({ ...form, [name]: value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setLoading(true);
+        // public key: 9rExCoZjRv6vaeKbl
+        // service id: service_fs5zagw
+        // emailJS template ID: template_r6svbzs
+        emailjs
+            .send(
+                `service_fs5zagw`,
+                `template_r6svbzs`,
+                {
+                    from_name: form.name,
+                    to_name: `Tony`,
+                    from_email: form.email,
+                    to_email: `tonyguo998@gmail.com`,
+                    message: form.message,
+                },
+                `9rExCoZjRv6vaeKbl`
+            )
+            .then(
+                () => {
+                    setLoading(false);
+                    alert(
+                        `Thank you. I will get back to you as soon as possible`
+                    );
+
+                    setForm({
+                        name: ``,
+                        email: ``,
+                        message: ``,
+                    });
+                },
+                (error) => {
+                    setLoading(false);
+                    console.log(error);
+                    alert("Something went wrong.");
+                }
+            );
+    };
     return (
         // classname to ensure we have everything we need to show in mobile, and larger devices
         <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
@@ -36,7 +75,7 @@ const Contact = () => {
                 <h3 className={styles.sectionHeadText}>Contact.</h3>
                 <form
                     ref={formRef}
-                    onSubmit={handlSubmit}
+                    onSubmit={handleSubmit}
                     className="mt-12 flex flex-col gap-8"
                 >
                     <label className="flex flex-col">
@@ -54,7 +93,7 @@ const Contact = () => {
                             type="text"
                             name="name"
                             value={form.name}
-                            onChange={handlChange}
+                            onChange={handleChange}
                             placeholder="What's your name?"
                             className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
                         />
@@ -67,7 +106,7 @@ const Contact = () => {
                             type="email"
                             name="email"
                             value={form.email}
-                            onChange={handlChange}
+                            onChange={handleChange}
                             placeholder="What's your email?"
                             className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
                         />
@@ -80,7 +119,7 @@ const Contact = () => {
                             rows={7}
                             name="message"
                             value={form.message}
-                            onChange={handlChange}
+                            onChange={handleChange}
                             placeholder="What do you want to say?"
                             className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
                         />
