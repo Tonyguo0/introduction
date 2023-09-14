@@ -1,12 +1,15 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import React, { useState, useRef, Suspense } from "react";
+import React, { useState, useRef, Suspense, MutableRefObject } from "react";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.cjs";
+import { Mesh } from "three";
 // import * as random from "maath/random/dist/maath-random.esm";
 
-const Stars = (props) => {
-    const ref = useRef();
-    const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
+const Stars = (props: any) => {
+    const ref = useRef<Mesh>(null!);
+    const [sphere] = useState(() =>
+        random.inSphere(new Float32Array(5000), { radius: 1.2 })
+    );
 
     // useFrame a react Hook from react Fiber
     // delta = change
@@ -26,7 +29,13 @@ const Stars = (props) => {
                 frustumCulled
                 {...props}
             >
-                <PointMaterial transparent color="#f272c8" size={0.002} sizeAttenuation={true} depthWrite={false}/>
+                <PointMaterial
+                    transparent
+                    color="#f272c8"
+                    size={0.002}
+                    sizeAttenuation={true}
+                    depthWrite={false}
+                />
             </Points>
         </group>
     );

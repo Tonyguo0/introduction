@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, RefObject } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
@@ -8,17 +8,17 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
 const Contact = () => {
-    const formRef = useRef();
+    const formRef = useRef(null);
     const [form, setForm] = useState({ name: "", email: "", message: "" });
     const [loading, setLoading] = useState(false);
 
-    const handleChange = (e) => {
+    const handleChange = (e: { target: { name: any; value: any; }; }) => {
         const { name, value } = e.target;
 
         setForm({ ...form, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         setLoading(true);
         // public key: 9rExCoZjRv6vaeKbl
