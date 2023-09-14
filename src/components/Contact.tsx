@@ -12,13 +12,13 @@ const Contact = () => {
     const [form, setForm] = useState({ name: "", email: "", message: "" });
     const [loading, setLoading] = useState(false);
 
-    const handleChange = (e: { target: { name: any; value: any; }; }) => {
+    const handleChange = (e: { target: { name: any; value: any } }) => {
         const { name, value } = e.target;
 
         setForm({ ...form, [name]: value });
     };
 
-    const handleSubmit = (e: { preventDefault: () => void; }) => {
+    const handleSubmit = (e: { preventDefault: () => void }) => {
         e.preventDefault();
         setLoading(true);
         // public key: 9rExCoZjRv6vaeKbl
