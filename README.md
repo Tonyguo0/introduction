@@ -1,18 +1,20 @@
-# Portfolio page TBC...
+# Welcome to the definitely all made by me and you won't see this portfolio page anywhere else on the internet best ever MY portfolio page!!!
 
-https://www.youtube.com/watch?v=0fYi8SGA20k&list=PLsEf0D1uqFXoCj5iBoEDFPPCunzfsnI3G&index=17&t=120s&ab_channel=JavaScriptMastery
-2:47:40
+### sections included in this portfolio: 
 
-- Navbar Section Done
-- Hero Section Done
-- About Section Done
-- Works Section Done
-- Technologies & Balls Section Done
-- Projects Section Done
-- Feedback Section Done
-- Contact form Done
-    - Earth model Done
-    - StarCanvas Done
+- Navbar Section
+- Hero Section 
+- About Section 
+- Works Section 
+- Technologies & Balls Section 
+- Projects Section 
+- Feedback Section 
+- Contact form 
+    - Earth model 
+    - StarCanvas 
 
-SketchFab
-Logo.com
+### reference of technologies used:
+
+- SketchFab
+- Logo.com
+- Email.js

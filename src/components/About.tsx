@@ -54,9 +54,8 @@ const About = () => {
                 className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
             >
                 I'm a skilled software Engineer with specialisation in
-                Typescript and Javascript, and expertise in framworks like
-                React, Node.js, Express, MongoDB and Three.js. I'm a quick
-                learner and work efficiently to create scalable and
+                Javascript, Typescript and Java, and expertise in framworks like
+                React, Angular, Node.js, Express, MongoDB and Three.js. I'm a quick learner and work efficiently to create scalable and
                 user-friendly solutions that solve real-world problems. Let's
                 work together to bring your ideas to life!
             </motion.p>

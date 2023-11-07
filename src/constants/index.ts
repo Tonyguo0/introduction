@@ -1,28 +1,25 @@
 import {
     mobile,
     backend,
-    creator,
     web,
     javascript,
     typescript,
     html,
     css,
     reactjs,
-    redux,
+    angular,
     tailwind,
     nodejs,
     mongodb,
     git,
-    figma,
     docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
+    ibm,
+    vix_technology,
+    portfolio,
+    country,
+    noteapp,
     threejs,
+    java
 } from "../assets";
 
 export const navLinks = [
@@ -46,21 +43,13 @@ const services = [
         icon: web,
     },
     {
-        title: "React Native Developer",
-        icon: mobile,
-    },
-    {
         title: "Backend Developer",
         icon: backend,
     },
     {
         title: "Android Developer",
         icon: mobile,
-    },
-    {
-        title: "Game Developer",
-        icon: creator,
-    },
+    }
 ];
 
 export interface Itechnology {
@@ -82,6 +71,10 @@ const technologies = [
         icon: javascript,
     },
     {
+        name: "Java",
+        icon: java
+    },
+    {
         name: "TypeScript",
         icon: typescript,
     },
@@ -90,12 +83,16 @@ const technologies = [
         icon: reactjs,
     },
     {
-        name: "Redux Toolkit",
-        icon: redux,
+        name: "Angular",
+        icon: angular,
     },
     {
         name: "Tailwind CSS",
         icon: tailwind,
+    },
+    {
+        name: "Three JS",
+        icon: threejs,
     },
     {
         name: "Node JS",
@@ -105,17 +102,10 @@ const technologies = [
         name: "MongoDB",
         icon: mongodb,
     },
-    {
-        name: "Three JS",
-        icon: threejs,
-    },
+
     {
         name: "git",
         icon: git,
-    },
-    {
-        name: "figma",
-        icon: figma,
     },
     {
         name: "docker",
@@ -136,55 +126,27 @@ export interface Iexperiences {
 
 const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
+        title: "Graduate Software Developer",
+        company_name: "IBM",
+        icon: ibm,
         iconBg: "#383E56",
-        date: "March 2020 - April 2021",
+        date: "March 2021 - August 2022",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Developing unit tests and logic using Java enterprise with SOAP infrastruture and Controller, service and DAO framework for a large electricity utility client.",
+            "Developed and showcased a proof of concept application with Angular, Java and MongoDB stack for a large oil and gas client",
+            "worked together in a team to design, develop and showcase a proof of concept Speech to text application with react, node.js and mongoDB stack",
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
+        title: "Associate Engineer",
+        company_name: "Vix technology",
+        icon: vix_technology,
         iconBg: "#E6DEDD",
-        date: "Jan 2021 - Feb 2022",
+        date: "Sept 2022 - now",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#383E56",
-        date: "Jan 2022 - Jan 2023",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#E6DEDD",
-        date: "Jan 2023 - Present",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Developing and maintaining web applications and back-end using Angular, Java and other related technologies.",
+            "worked with monitoring and maintaining AWS instances, RDS and other relavent architectures.",
+            "created a bitbucket pipeline, aws code pipeline and cdk using Python as a project to deploy ansible Ubuntu virtual environment for new learners to experiment."
         ],
     },
 ];
@@ -236,16 +198,16 @@ export interface Iprojectcard {
 
 const projects = [
     {
-        name: "Car Rent",
+        name: "This portfolio Page",
         description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+            "Web-based portfolio page that allows anyone to browse my experience, technologies I've used and project I've done in the past.",
         tags: [
             {
                 name: "react",
                 color: "blue-text-gradient",
             },
             {
-                name: "mongodb",
+                name: "three.js",
                 color: "green-text-gradient",
             },
             {
@@ -253,49 +215,49 @@ const projects = [
                 color: "pink-text-gradient",
             },
         ],
-        image: carrent,
-        source_code_link: "https://github.com/",
+        image: portfolio,
+        source_code_link: "https://github.com/Tonyguo0/introduction",
     },
     {
-        name: "Job IT",
+        name: "Statistics of the World",
         description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+            "Reactive Web application that enables users to search for a countries, and see the capital, area, flag, languages and weather of the capital city based on the country they search for.",
         tags: [
             {
                 name: "react",
                 color: "blue-text-gradient",
             },
             {
-                name: "restapi",
+                name: "javascript",
                 color: "green-text-gradient",
             },
             {
-                name: "scss",
+                name: "openweatherapi",
                 color: "pink-text-gradient",
             },
         ],
-        image: jobit,
-        source_code_link: "https://github.com/",
+        image: country,
+        source_code_link: "https://github.com/tonyguo0",
     },
     {
-        name: "Trip Guide",
+        name: "Blog list",
         description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+            "bloglist application, allows users to save information about interesting blogs they have stumbled across on the internet, each listed blog we will save the author, title, url and amount of upvotes from users of the application.",
         tags: [
             {
-                name: "nextjs",
+                name: "reactjs",
                 color: "blue-text-gradient",
             },
             {
-                name: "supabase",
+                name: "nodejs",
                 color: "green-text-gradient",
             },
             {
-                name: "css",
+                name: "mongodb",
                 color: "pink-text-gradient",
             },
         ],
-        image: tripguide,
+        image: noteapp,
         source_code_link: "https://github.com/",
     },
 ];
