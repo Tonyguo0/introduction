@@ -38,7 +38,6 @@ const Ball = (props: { imgUrl: any }) => {
                     position={[0, 0, 1]}
                     scale={1.5}
                     rotation={[10 * Math.PI, 0, 6.25]}
-                    flatShading
                     map={decal}
                 />
             </mesh>
