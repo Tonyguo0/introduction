@@ -34,10 +34,11 @@ const Ball = (props: { imgUrl: any }) => {
                     polygonOffsetFactor={-5}
                     flatShading
                 />
+                {/* position rotation etc... of the tech image on the ball */}
                 <Decal
-                    position={[0, 0, 1]}
-                    scale={1.5}
+                    position={[0, 0, 1.00]}
                     rotation={[10 * Math.PI, 0, 6.25]}
+                    scale={1.5}
                     map={decal}
                 />
             </mesh>
@@ -48,7 +49,6 @@ const Ball = (props: { imgUrl: any }) => {
 const BallCanvas = ({ icon }: Itechnology) => (
     <Canvas
         frameloop="demand"
-        shadows
         camera={{ position: [20, 3, 5], fov: 25 }}
         gl={{ preserveDrawingBuffer: true }}
     >
