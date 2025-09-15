@@ -11,6 +11,7 @@ import {
     tailwind,
     nodejs,
     mongodb,
+    computer,
     git,
     docker,
     ibm,
@@ -112,6 +113,11 @@ const technologies = [
         icon: docker,
     },
 ];
+
+const computerIcon = {
+    name: "computer",
+    icon: computer,
+};
 
 export interface Iexperiences {
     experience: {
@@ -262,4 +268,4 @@ const projects = [
     },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects, computerIcon };

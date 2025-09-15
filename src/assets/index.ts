@@ -32,6 +32,8 @@ import portfolio from "./portfolio.png";
 import country from "./country.png";
 import noteapp from "./noteapp.png";
 
+import computer from "./computer.png";
+
 export {
     logo,
     backend,
@@ -62,5 +64,6 @@ export {
     vix_technology,
     portfolio,
     country,
-    noteapp
+    noteapp,
+    computer
 };

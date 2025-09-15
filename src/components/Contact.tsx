@@ -52,8 +52,24 @@ const Contact = () => {
                 },
                 (error) => {
                     setLoading(false);
-                    console.log(error);
-                    alert("Something went wrong.");
+                    console.error('EmailJS Error:', error);
+                    
+                    // Provide more specific error messages
+                    let errorMessage = "Something went wrong.";
+                    
+                    if (error.text) {
+                        if (error.text.includes('Invalid grant') || error.text.includes('unauthorized')) {
+                            errorMessage = "Email service authentication expired. Please try again later or contact me directly.";
+                        } else if (error.text.includes('quota')) {
+                            errorMessage = "Email quota exceeded. Please try again later or contact me directly.";
+                        } else if (error.text.includes('network')) {
+                            errorMessage = "Network error. Please check your connection and try again.";
+                        } else {
+                            errorMessage = `Email failed to send: ${error.text}`;
+                        }
+                    }
+                    
+                    alert(errorMessage);
                 }
             );
     };
