@@ -28,6 +28,7 @@ import tesla from "./company/tesla.png";
 import ibm from "./company/ibm.png";
 import vix_technology from "./company/vix_technology.png";
 
+import TVBbooking from "./TVBbooking.png";
 import portfolio from "./portfolio.png";
 import country from "./country.png";
 import noteapp from "./noteapp.png";
@@ -62,6 +63,7 @@ export {
     tesla,
     ibm,
     vix_technology,
+    TVBbooking,
     portfolio,
     country,
     noteapp,
