@@ -114,7 +114,7 @@ const experiences = [
         icon: ibm,
         iconBg: "#383E56",
         date: "March 2021 - August 2022",
-        points: ["Developing unit tests and logic using Java enterprise with SOAP infrastruture and Controller, service and DAO framework for a large electricity utility client.", "Developed and showcased a proof of concept application with Angular, Java and MongoDB stack for a large oil and gas client", "worked together in a team to design, develop and showcase a proof of concept Speech to text application with react, node.js and mongoDB stack"]
+        points: ["Implemented unit tests and business logic using Java Enterprise, leveraging SOAP infrastructure along with Controller, Service, and DAO frameworks for a large electricity utility client.", "Designed and delivered a proof-of-concept application for a major oil and gas client, built with Angular, Java, and MongoDB, demonstrating full-stack capabilities.", "Collaborated within a team to design, develop, and present a proof-of-concept speech-to-text application using the React, Node.js, and MongoDB stack, showcasing modern web development and AI integration."]
     },
     {
         title: "Software Engineer",
@@ -122,7 +122,7 @@ const experiences = [
         icon: vix_technology,
         iconBg: "#E6DEDD",
         date: "Sept 2022 - now",
-        points: ["Developing and maintaining web applications and back-end using Angular, Java and other related technologies.", "worked with monitoring and maintaining AWS instances, RDS and other relavent architectures.", "created a bitbucket pipeline, aws code pipeline and cdk using Python as a project to deploy ansible Ubuntu virtual environment for new learners to experiment."]
+        points: ["Develop and maintain web applications and backend services using Angular, Java, and related technologies within an agile environment.", "Monitored and maintained AWS infrastructure, including EC2 instances, RDS, ECS, and supporting architectures, ensuring reliability and scalability.", "Designed and implemented automated deployment pipelines with Bitbucket Pipelines, AWS CodePipeline, and AWS CDK (Python) to provision an Ansible-based Ubuntu virtual environment, enabling new learners to experiment in a cloud sandbox."]
     }
 ];
 
@@ -178,7 +178,8 @@ const projects = [
                 color: "blue-text-gradient"
             },
             {
-                name: "bun"
+                name: "bun",
+                color: "white-text-gradient"
             },
             {
                 name: "elysiaJS",
